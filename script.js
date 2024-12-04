@@ -106,6 +106,7 @@ sendMessageBtn.addEventListener("click", () => {
       },
     ],
     model: modelSelector.value,
+    stream: false,
     ...getSettings(),
   };
   const Password = passwordInput.value.trim();
