@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LLM</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>LLM</h1>
+
+    <div id="inputArea">
+      <div id="settings">
+        <select id="modelSelector"></select>
+      </div>
+
+      <br />
+
+      <div>
+        <textarea
+          id="userInput"
+          rows="4"
+          placeholder="Type your message here..."
+        ></textarea
+        ><br />
+
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter the password here..."
+        />
+      </div>
+
+      <button id="sendMessageBtn">Send Message</button>
+    </div>
+
+    <br />
+
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
