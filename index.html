@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LLM</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css"
+    />
+    <link
+      href="https://unpkg.com/filepond/dist/filepond.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>LLM</h1>
+    <div id="inputArea">
+      <div id="settings">
+        <select id="modelSelector"></select>
+      </div>
+      <br />
+      <label for="streamCheckbox">Stream (Live Response):</label>
+      <input type="checkbox" id="streamCheckbox" />
+      <br />
+      <br />
+
+      <div>
+        <textarea
+          id="userInput"
+          rows="4"
+          placeholder="Type your message here..."
+        ></textarea>
+
+        <br />
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter the password here..."
+        />
+
+        <br />
+        <input
+          type="file"
+          class="filepond"
+          id="fileUpload"
+          multiple
+          credits="false"
+        />
+        <br />
+
+        <button id="sendMessageBtn">Send Message</button>
+      </div>
+    </div>
+
+    <br />
+
+    <div id="outputDiv" class="output-container">
+      <div class="output-header">
+        <img
+          src="https://img.icons8.com/material-rounded/96/copy.png"
+          alt="copy"
+          id="copyButton"
+          class="copy-button"
+          style="visibility: hidden"
+        />
+      </div>
+      <div class="output-content">
+        <div id="output" class="message-container"></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+    <script src="TogetherClient.js"></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
